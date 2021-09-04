@@ -1,6 +1,6 @@
 
 
-<?php $baseUrl="http://localhost/hospital/"; ?>
+<?php $baseUrl="http://localhost/hospital47/"; ?>
 
 
 <!DOCTYPE html>
@@ -24,6 +24,9 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo $baseUrl; ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+   
 
 </head>
 

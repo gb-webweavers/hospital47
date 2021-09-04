@@ -11,16 +11,44 @@
 		        <h6 class="m-0 font-weight-bold text-primary">Create New Emp Type</h6>
 		    </div>
 		    <div class="card-body">
-		        <form action="" method="POST">
-		        	
-		        	<div class="form-group">
-		        		<label for="">Emp Type</label>
-		        		<input type="text" class="form-control" name="empType" required>
-		        	</div>
+		        
+		    	<?php
 
-		        	<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+		    		$id=$_GET['id'];
 
-		        </form>
+		    		include '../../connection.php';
+
+		    		$sql="DELETE FROM empType WHERE empTypeId='$id'";
+
+		    		$exec=mysqli_query($con,$sql);
+
+		    		if ($exec) {
+		    			?>
+		    				<div class="row">
+		    					<div class="col-12 bg-success text-center text-white">
+		    						<h1 class="display-3">DATA DELETED</h1>
+		    					</div>
+		    				</div>
+		    			<?php
+		    		}
+		    		else{
+		    			?>
+		    				<div class="row">
+		    					<div class="col-12 bg-danger text-center text-white">
+		    						<h1 class="display-3">DATA NOT DELETED</h1>
+		    					</div>
+		    				</div>
+		    			<?php
+		    		}
+
+		    	?>
+
+		    	<script>
+		    		window.setTimeout(function() {
+		    		    window.location.href = 'view.php';
+		    		}, 5000);
+		    	</script>
+
 		    </div>
 		</div>
 	</div>
