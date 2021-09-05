@@ -28,22 +28,47 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <?php
+
+                if ($_SESSION['empType']=='admin') {
+                    ?>
+                        <!-- Nav Item - Pages Collapse Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo">
+                                <i class="fas fa-fw fa-cog"></i>
+                                <span>Employees</span>
+                            </a>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                                <div class="bg-white py-2 collapse-inner rounded">                        
+                                    <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/emp_type/create.php">Create Emp Type</a>
+                                    <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/emp_type/view.php">View Emp Type</a>
+                                   <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/employee/create.php">Create Employee</a>
+                                    <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/employee/view.php">View Employee</a>
+                                </div>
+                            </div>
+                        </li>
+                    <?php
+                }
+
+            ?>
+
+
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+                    aria-expanded="true" aria-controls="collapse3">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Employees</span>
+                    <span>Registrations</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">                        
-                        <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/emp_type/create.php">Create Emp Type</a>
-                        <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/emp_type/view.php">View Emp Type</a>
-                       <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/employee/create.php">Create Employee</a>
-                        <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/employee/view.php">View Employee</a>
+                        <a class="collapse-item" href="<?php echo $baseUrl; ?>pages/registration/create.php">Create Registration</a>
+                       
                     </div>
                 </div>
             </li>
+
+            
 
            
         </ul>
